@@ -17,7 +17,6 @@ a{
     color: white;
     font-family: Montserrat;
     display: flex;
-    /* Recordar que es necesario que sea flex para usar estas 2      */
     justify-content: center;
     align-items: center;
 }
@@ -121,26 +120,41 @@ a{
     width: 80%;
 }
 
-/* Footer */
-
-.footer{
+footer {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
     width: 100%;
+    bottom: 0;
+    /* text-align: ; */
     display: flex;
     flex-direction: row;
-    height: 45px;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgb(238, 238, 238);
+    max-height: 4vh;
 }
 
-#navegacion-3{
-    padding-left: 10px;
+
+.footer-links {
+    list-style: none;
+    padding: 0;
 }
 
-#navegacion-3 :hover {
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
     font-weight: bold;
-    color: blue;
 }
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 
 #iconos{
     display: flex;
@@ -160,7 +174,7 @@ a{
 
 
 
-/* Exclusivo de Hombre */
+/* Exclusivo */
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -192,4 +206,92 @@ a{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-3 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #navegacion-2 {
+        font-size: 16px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #buscar {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    #buscador {
+        width: 90%;
+    }
+
+    #carrito {
+        padding-top: 10px;
+    }
+
+    .backgroud {
+        display: block;
+        padding: 0;
+    }
+
+    #wallpaper {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .header-1, .header-2 {
+        font-size: 14px;
+        height: auto;
+    }
+
+    .header-3 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #navegacion-2 {
+        font-size: 14px;
+        padding-left: 0;
+    }
+
+    #buscar {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    #buscador {
+        width: 80%;
+    }
+
+    #carrito {
+        padding-top: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 10px 0;
+    }
 }
